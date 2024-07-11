@@ -539,6 +539,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   cursor: pointer;
 }
 
+.resize{
+  resize: both;
+}
+
 .flex-col{
   flex-direction: column;
 }
@@ -761,6 +765,41 @@ body {
   z-index: 30;
   width: 100%;
   background-color: #f8f9fa;
+  font-weight: 700;
+  color: var(--primary-color);
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.nav:hover{
+  color: var(--primary-color-hover);
+}
+
+.blinds{
+  display: none;
+  height: auto;
+  width: auto;
+}
+
+@media (min-width: 768px){
+  .blinds{
+    display: inline-block;
+  }
+}
+
+.blinds-collapse{
+  display: inline-block;
+  height: auto;
+  width: auto;
+}
+
+@media (min-width: 768px){
+  .blinds-collapse{
+    display: none;
+  }
 }
 
 .book-me-btn{
@@ -873,6 +912,17 @@ body {
   justify-content: space-between;
   border-bottom-width: 1px;
   border-color: var(--primary-color);
+  font-weight: 700;
+  color: var(--primary-color);
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.nav-collapsed-header:hover{
+  color: var(--primary-color-hover);
 }
 
 .hero-section{
@@ -1138,7 +1188,6 @@ body {
   width: 100%;
   flex-wrap: wrap;
   gap: 6rem;
-  border-right-width: 1px;
 }
 
 @media (min-width: 768px){

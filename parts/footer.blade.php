@@ -3,3 +3,5 @@
         <p class="text-center">Copyright &copy; Personal Booking 1 | Powered by <a href="https://nidavel.com">Nidavel</a></p>
     </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/gh/Ikennaf1/blinds@latest/dist/blinds.min.js"></script>
+  

@@ -32,7 +32,7 @@ $ctaText    = $defaults['cta-text'];
                             <div class="flex flex-col gap-8">
                                 <h1 class="name-hero">{{Auth::user()->name}}</h1>
                                 <span class="title-hero">{{$userTitle}}</span>
-                                <p>{{$userBio}}</p>
+                                <p class="text">{{$userBio}}</p>
                                 <span class="hero-cta">
                                     <a href="#" onclick="handleBookMePopUp()">
                                         <span class="hero-cta-btn hero-cta-btn-book-me">{{$ctaText}}</span>

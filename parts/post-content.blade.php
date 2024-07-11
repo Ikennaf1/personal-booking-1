@@ -15,17 +15,17 @@
         @endif
 
         {{-- Post meta --}}
-        <div class="text-xs">
+        <div class="text-xs text">
             <p>By <a class="link" href="">{{ $post->author }}</a> | On {{ date('l jS F Y, h:ia', strtotime($post->updated_at)) }}</p>
         </div>
 
         {{-- Post content --}}
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4 text">
             {!! $post->content !!}
         </div>
 
         {{-- About author --}}
-        <div class="">
+        <div class="text">
             <div class="flex flex-col gap-4 items-center">
                 <div class="post-author-img">
                     <img

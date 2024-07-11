@@ -17,6 +17,7 @@
                         <li class="menu-item">{!! $menu !!}</li>
                     @endforeach
                 </ul>
+                <div class="blinds" id="blinds_container_id"></div>
                 <label class="book-me-btn" for="show_book_me_pop_up">
                     <span class="">{{ucwords($ctaText)}}</span>
                 </label>
@@ -37,6 +38,7 @@
     <div class="flex flex-col gap-8">
         <div class="nav-collapsed-header">
             <a class="font-bold text-primary-color" href="{{ homeUrl() }}"><h2>{{ settings('r', 'general.name') }}</h2></a>
+            <div id="blinds_container_collapse_id" class="blinds-collapse"></div>
             <label class="cursor-pointer link" for="show_nav">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" view-box="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />

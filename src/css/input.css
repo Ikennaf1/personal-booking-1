@@ -41,7 +41,15 @@ body {
 }
 
 .nav {
-    @apply fixed z-30 w-full body-bg;
+    @apply fixed z-30 w-full body-bg link;
+}
+
+.blinds {
+    @apply hidden md:inline-block w-auto h-auto;
+}
+
+.blinds-collapse {
+    @apply inline-block md:hidden w-auto h-auto;
 }
 
 .book-me-btn {
@@ -81,7 +89,7 @@ body {
 }
 
 .nav-collapsed-header {
-    @apply flex justify-between items-center h-16 border-b border-primary-color;
+    @apply flex justify-between items-center h-16 border-b border-primary-color link;
 }
 
 .hero-section {
@@ -149,7 +157,7 @@ body {
 }
 
 .posts-list {
-    @apply w-full md:w-[72%] flex gap-24 md:gap-32 flex-wrap border-r;
+    @apply w-full md:w-[72%] flex gap-24 md:gap-32 flex-wrap;
 }
 
 .post-container {
