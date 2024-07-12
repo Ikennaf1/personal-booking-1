@@ -16,7 +16,7 @@
 
         {{-- Post meta --}}
         <div class="text-xs text">
-            <p>By <a class="link" href="">{{ $post->author }}</a> | On {{ date('l jS F Y, h:ia', strtotime($post->updated_at)) }}</p>
+            <p>By <a class="link primary-color" href="">{{ $post->author }}</a> | On {{ date('l jS F Y, h:ia', strtotime($post->updated_at)) }}</p>
         </div>
 
         {{-- Post content --}}

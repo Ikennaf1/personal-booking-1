@@ -61,6 +61,19 @@ function getThemeDefaults()
     ];
 }
 
-registerWidgetArea('right-sidebar');
+// registerWidgetArea('right-sidebar');
 
 registerSettingsForm('Personal Booking 1', 'personal_booking_1', front_path('pages/settings.php'));
+
+customizeSelectors('personal_booking_1', [
+    '.primary-color' => ['color'],
+    '.primary-color:hover' => ['color'],
+    '.primary-bg-color' => ['background-color'],
+    '.primary-bg-color:hover' => ['background-color'],
+    '.bordered-links' => ['color', 'border-color'],
+    '.bordered-links:hover' => ['color', 'border-color'],
+    '.contact-icons-container a' => ['color'],
+    '.contact-icons-container a:hover' => ['color'],
+    '.single-post-content a' => ['color'],
+    '.single-post-content a:hover' => ['color']
+]);

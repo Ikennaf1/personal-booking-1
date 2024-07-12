@@ -16,6 +16,8 @@ $ctaText    = $defaults['cta-text'];
         <link rel="stylesheet" href="{{ homeUrl('/assets/css/style.css') }}">
         <script type="text/javascript" src="{{ homeUrl('/assets/js/script.js') }}" defer></script>
         <title>{{ settings('r', "general.name", "Nidavel") }} | Home</title>
+        {!!customizedStyles()!!}
+        {!! getHead() !!}
     </head>
 
     <body>
@@ -30,15 +32,15 @@ $ctaText    = $defaults['cta-text'];
                     <div class="hero-section">
                         <div class="hero-flex-1 hero-texts">
                             <div class="flex flex-col gap-8">
-                                <h1 class="name-hero">{{Auth::user()->name}}</h1>
+                                <h1 class="name-hero ">{{Auth::user()->name}}</h1>
                                 <span class="title-hero">{{$userTitle}}</span>
                                 <p class="text">{{$userBio}}</p>
                                 <span class="hero-cta">
                                     <a href="#" onclick="handleBookMePopUp()">
-                                        <span class="hero-cta-btn hero-cta-btn-book-me">{{$ctaText}}</span>
+                                        <span class="hero-cta-btn hero-cta-btn-book-me primary-bg-color">{{$ctaText}}</span>
                                     </a>
                                     <a href="#" onclick="handleQuestionMePopUp()">
-                                        <span class="hero-cta-btn hero-cta-btn-question-me">Ask me a question</span>
+                                        <span class="hero-cta-btn hero-cta-btn-question-me bordered-links">Ask me a question</span>
                                     </a>
                                 </span>
                             </div>
@@ -85,11 +87,11 @@ $ctaText    = $defaults['cta-text'];
                                             </p>
                                         </div>
                                         <div class="post-list-footer-sm">
-                                            <a class="" href="{{ exportLink("/posts/$post->link") }}"><span>Read</span></a>
+                                            <a class="bordered-links" href="{{ exportLink("/posts/$post->link") }}"><span>Read</span></a>
                                         </div>
                                     </div>
-                                    <div class="post-list-footer">
-                                        <a href="{{ exportLink("/posts/$post->link") }}"><span>Read</span></a>
+                                    <div class="post-list-footer bordered-links">
+                                        <a href="{{ exportLink("/posts/$post->link") }}"><span class="read-link bordered-links">Read</span></a>
                                     </div>
                                 </div>
                             @endforeach
