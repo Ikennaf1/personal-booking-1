@@ -4,6 +4,10 @@
     $ctaText    = $defaults['cta-text'];
 @endphp
 
+<span id="top"></span>
+<div id="nav_fixed_bottom" class="nav-fixed-bottom">
+    <a href="#top" title="Move to top"><div class="nav-move-top">&#10224;</div></a>
+</div>
 <nav class="nav primary-color">
     <div class="body-margin">
         <div class="flex justify-between items-center h-24">
@@ -34,21 +38,21 @@
 <button id="show_nav" class="hidden" type="button" onclick="handleNav()"></button>
 
 <label id="label_nav_collapsed" for="show_nav" class="fixed w-full h-full bg-black z-40 opacity-70 transition duration-300 ease-in-out delay-500"></label>
-<div id="nav_collapsed" class="fixed nav-collapse">
+<div id="nav_collapsed" class="fixed nav-collapse primary-color">
     <div class="flex flex-col gap-8">
-        <div class="nav-collapsed-header primary-color">
-            <a class="font-bold text-primary-color" href="{{ homeUrl() }}"><h2>{{ settings('r', 'general.name') }}</h2></a>
+        <div class="nav-collapsed-header primary-color bordered-links">
+            <a class="font-bold text-primary-color primary-color" href="{{ homeUrl() }}"><h2>{{ settings('r', 'general.name') }}</h2></a>
             <div id="blinds_container_collapse_id" class="blinds-collapse"></div>
-            <label class="cursor-pointer link" for="show_nav">
+            <label class="cursor-pointer link primary-color" for="show_nav">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" view-box="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </label>
         </div>
 
-        <ul class="flex flex-col gap-4 items-start">
+        <ul class="flex flex-col gap-4 items-start primary-color">
             @foreach ($menus as $menu)
-                <li class="menu-item-mobile">{!! $menu !!}</li>
+                <li class="menu-item-mobile primary-color">{!! $menu !!}</li>
             @endforeach
         </ul>
     </div>

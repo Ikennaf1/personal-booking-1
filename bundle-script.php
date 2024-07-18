@@ -3,9 +3,9 @@
 $bundles = "";
 $dest = "./assets/js/script.js";
 $scripts = [
-    "./src/js/nav.js",
     "./src/js/book-me-pop-up.js",
     "./src/js/question-me-pop-up.js",
+    "./src/js/nav.js",
     // "./src/js/footer.js",
 ];
 
